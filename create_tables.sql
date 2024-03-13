@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS schools;
 
 -- Create the schools table
 CREATE TABLE schools (
-    school_id INT PRIMARY KEY,
+    school_id INT IDENTITY(1,1) PRIMARY KEY,
     school_name VARCHAR(255) NOT NULL,
     school_address VARCHAR(255),
     school_city VARCHAR(100),
@@ -15,7 +15,7 @@ CREATE TABLE schools (
 
 -- Create the students table
 CREATE TABLE students (
-    student_id INT PRIMARY KEY,
+    student_id INT IDENTITY(1,1) PRIMARY KEY,
     student_name VARCHAR(255) NOT NULL,
     date_of_birth DATE,
     gender VARCHAR(10),
@@ -25,7 +25,7 @@ CREATE TABLE students (
 
 -- Create the student_test_scores table
 CREATE TABLE student_test_scores (
-    test_id INT PRIMARY KEY,
+    test_id INT IDENTITY(1,1) PRIMARY KEY,
     student_id INT,
     test_date DATE,
     test_subject VARCHAR(50),

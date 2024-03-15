@@ -11,7 +11,7 @@ load_dotenv(os.path.join(this_directory, ".env"))
 # Define your connection parameters
 server = "localhost\\SQLEXPRESS"  # e.g., 'localhost\SQLEXPRESS'
 # server = os.environ.get("server")
-database = os.environ.get("database")
+database = "test_db"
 
 # Create a connection string
 # This will only work with windows authentication
@@ -81,7 +81,7 @@ def execute_sql(file_path):
 
 if __name__ == "__main__":
     # create tables
-    execute_sql("create_tables.sql")
+    execute_sql("create_tables_tests.sql")
     number_of_schools = 10
     number_of_students = 100
     number_of_test_scores = 1000
